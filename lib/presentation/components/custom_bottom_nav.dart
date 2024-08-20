@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get/state_manager.dart';
 import 'package:tektok/app/utils/styles/theme_style.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -49,7 +51,7 @@ class CustomBottomNav extends StatelessWidget {
             child: Row(
               children: [
                 Icon(
-                  Icons.chat,
+                  Icons.add,
                   color: colorStyle.black,
                 ),
                 SizedBox(
@@ -102,6 +104,7 @@ class CustomBottomNav extends StatelessWidget {
       ).then((value) {
         // Handle menu selection
         print('Selected: $value');
+        Get.toNamed('/$value');
       });
     }
 
