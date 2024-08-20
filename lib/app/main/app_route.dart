@@ -24,6 +24,7 @@ class AppRoute {
       curve: Curves.linear,
       transition: Transition.native,
       transitionDuration: const Duration(milliseconds: 500),
+      children: contentPages,
     ),
   ];
 

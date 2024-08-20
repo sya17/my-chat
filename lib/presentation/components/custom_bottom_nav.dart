@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
+import 'package:tektok/app/main/app_route.dart';
 import 'package:tektok/app/utils/styles/theme_style.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -104,7 +103,7 @@ class CustomBottomNav extends StatelessWidget {
       ).then((value) {
         // Handle menu selection
         print('Selected: $value');
-        Get.toNamed('/$value');
+        Get.toNamed('/$value', id: 1);
       });
     }
 
@@ -118,7 +117,10 @@ class CustomBottomNav extends StatelessWidget {
         children: [
           Expanded(
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.toNamed(RouteName.homePage);
+                Get.toNamed(RouteName.chatInq, id: 1);
+              },
               child: Container(
                 color: colorStyle.white,
                 child: Icon(
