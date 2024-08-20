@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "770630620824",
+    "firebase_url": "https://tektok-9727e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tektok-9727e",
+    "storage_bucket": "tektok-9727e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770630620824:android:7a9866d6554f8a8e70e2ed",
+        "android_client_info": {
+          "package_name": "com.either.tektok"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs-HTgiYq6DSdEGH-PUz9rRp-MliBR24c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
