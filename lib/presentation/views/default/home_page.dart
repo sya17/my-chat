@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:tektok/app/main/app_route.dart';
 import 'package:tektok/app/utils/styles/theme_style.dart';
-import 'package:tektok/presentation/components/custom_bottom_nav.dart';
+import 'package:tektok/presentation/components/customs/custom_bottom_nav.dart';
 import 'package:tektok/presentation/controllers/default/home_page_controller.dart';
 import 'package:tektok/presentation/views/modules/chat_inq_page.dart';
 

@@ -7,6 +7,7 @@ part 'layout_style.dart';
 part 'font_size_style.dart';
 part 'font_wight_style.dart';
 part 'font_style.dart';
+part 'box_shadow.dart';
 
 class AppTheme {
   ThemeData dark() {
