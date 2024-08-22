@@ -13,7 +13,20 @@
           "package_name": "com.either.tektok"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "770630620824-tfarrj62lgurvobhicab7s243jp9vkr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.either.tektok",
+            "certificate_hash": "9dfaa2507cac6411aa79249d11aac1f302436995"
+          }
+        },
+        {
+          "client_id": "770630620824-hmframkpubc9boca1ilfhadt4l8li6j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCs-HTgiYq6DSdEGH-PUz9rRp-MliBR24c"
@@ -21,7 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770630620824-hmframkpubc9boca1ilfhadt4l8li6j7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "770630620824-8ibnuvp6c0usponedqh9hfjtsp4iqbmc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.either.tektok"
+              }
+            }
+          ]
         }
       }
     }

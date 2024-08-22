@@ -28,114 +28,73 @@ class LoginPage extends GetView<LoginPageController> {
           body: Container(
             width: layoutStyle.screenWidth,
             height: layoutStyle.screenHeight,
+            padding: EdgeInsets.all(layoutStyle.defaultMargin / 2),
             child: Column(
               children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: layoutStyle.defaultMargin,
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: CustomTextBox(
-                          height: layoutStyle.blockVertical * 6,
-                          margin: EdgeInsets.symmetric(
-                            vertical: layoutStyle.defaultMargin / 3,
-                            // horizontal: layoutStyle.defaultMargin,
-                          ),
-                          obscureText: false,
-                          border: Border.all(
-                            color: colorStyle.grey,
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(
-                            layoutStyle.defaultMargin / 2,
-                          ),
-                          controller: controller.noTelpController,
-                          decoration: InputDecoration(
-                            isCollapsed: true,
-                            prefix: SizedBox(
-                              width: layoutStyle.defaultMargin / 2,
-                            ),
-                            prefixIconConstraints: BoxConstraints(
-                              maxWidth: layoutStyle.blockHorizontal * 6.5,
-                              maxHeight: layoutStyle.blockHorizontal * 6.5,
-                            ),
-                            hintText: 'No Telp',
-                            hintStyle: textStyle.greyText,
-                            fillColor: colorStyle.white,
-                            border: InputBorder.none,
-                          ),
-                          backgroundColor: colorStyle.white,
-                          keyboardType: TextInputType.phone,
-                        ),
-                      ),
-                      SizedBox(
+                Expanded(
+                  child: CustomTextBox(
+                    height: layoutStyle.blockVertical * 6,
+                    margin: EdgeInsets.symmetric(
+                      vertical: layoutStyle.defaultMargin / 3,
+                      // horizontal: layoutStyle.defaultMargin,
+                    ),
+                    obscureText: false,
+                    border: Border.all(
+                      color: colorStyle.grey,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                      layoutStyle.defaultMargin / 2,
+                    ),
+                    controller: controller.noTelpController,
+                    decoration: InputDecoration(
+                      isCollapsed: true,
+                      prefix: SizedBox(
                         width: layoutStyle.defaultMargin / 2,
                       ),
-                      CustomButton(
-                        width: layoutStyle.blockHorizontal * 20,
-                        height: layoutStyle.blockVertical * 6,
-                        margin: EdgeInsets.symmetric(
-                          vertical: layoutStyle.defaultMargin / 2,
-                          // horizontal: layoutStyle.defaultMargin,
-                        ),
-                        onPressed: () async {
-                          controller.sendOtp();
-                        },
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.resolveWith(
-                            (states) => colorStyle.blue,
-                          ),
-                          overlayColor: MaterialStateProperty.resolveWith(
-                            (states) => colorStyle.black.withOpacity(0.1),
-                          ),
-                          shape: MaterialStateProperty.resolveWith(
-                            (states) => RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                layoutStyle.defaultMargin / 2,
-                              ),
-                            ),
-                          ),
-                        ),
-                        label: const Icon(Icons.send_outlined),
-                        // height: layoutStyle.blockVertical * 6.5,
+                      prefixIconConstraints: BoxConstraints(
+                        maxWidth: layoutStyle.blockHorizontal * 6.5,
+                        maxHeight: layoutStyle.blockHorizontal * 6.5,
                       ),
-                    ],
+                      hintText: 'No Telp',
+                      hintStyle: textStyle.greyText,
+                      fillColor: colorStyle.white,
+                      border: InputBorder.none,
+                    ),
+                    backgroundColor: colorStyle.white,
+                    keyboardType: TextInputType.phone,
                   ),
                 ),
-                CustomTextBox(
+                CustomButton(
                   height: layoutStyle.blockVertical * 6,
                   margin: EdgeInsets.symmetric(
-                    vertical: layoutStyle.defaultMargin / 3,
-                    horizontal: layoutStyle.defaultMargin,
+                    vertical: layoutStyle.defaultMargin / 2,
+                    // horizontal: layoutStyle.defaultMargin,
                   ),
-                  obscureText: false,
-                  border: Border.all(
-                    color: colorStyle.grey,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(
-                    layoutStyle.defaultMargin / 2,
-                  ),
-                  controller: controller.otpController,
-                  decoration: InputDecoration(
-                    isCollapsed: true,
-                    prefix: SizedBox(
-                      width: layoutStyle.defaultMargin / 2,
+                  onPressed: () async {
+                    controller.login();
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith(
+                      (states) => colorStyle.blue,
                     ),
-                    prefixIconConstraints: BoxConstraints(
-                      maxWidth: layoutStyle.blockHorizontal * 6.5,
-                      maxHeight: layoutStyle.blockHorizontal * 6.5,
+                    overlayColor: MaterialStateProperty.resolveWith(
+                      (states) => colorStyle.black.withOpacity(0.1),
                     ),
-                    hintText: 'OTP',
-                    hintStyle: textStyle.greyText,
-                    fillColor: colorStyle.white,
-                    border: InputBorder.none,
+                    shape: MaterialStateProperty.resolveWith(
+                      (states) => RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                          layoutStyle.defaultMargin / 2,
+                        ),
+                      ),
+                    ),
                   ),
-                  backgroundColor: colorStyle.white,
-                  keyboardType: TextInputType.number,
-                  maxLength: 6,
+                  // label: const Icon(Icons.send_outlined),
+                  label: Text(
+                    'Login',
+                    style: textStyle.whiteText,
+                  ),
+                  // height: layoutStyle.blockVertical * 6.5,
                 ),
               ],
             ),
